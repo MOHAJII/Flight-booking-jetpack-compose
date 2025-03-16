@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "510965361893",
+    "project_id": "first-app-54448",
+    "storage_bucket": "first-app-54448.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:510965361893:android:3c0a03f7d34a4e5ac2f80c",
+        "android_client_info": {
+          "package_name": "net.haji.first_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgGwruIyFQDAMSs5UXa-p226E2Kldchlc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
