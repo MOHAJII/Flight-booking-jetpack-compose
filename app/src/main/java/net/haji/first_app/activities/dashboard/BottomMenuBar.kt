@@ -1,5 +1,8 @@
 package net.haji.first_app.activities.dashboard
 
+import android.widget.Toast
+import androidx.compose.material.BottomNavigationItem
+import androidx.compose.material.Icon
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -34,10 +37,28 @@ fun MyBottomMenu() {
     }
 
     BottomAppBar(
-       backroundColor = colorResource(id = R.color.purple_700),
+        backgroundColor = colorResource(id = R.color.purple_700),
         elevation = 3.dp
 
     ) {
+        bottomMenuItemsList.forEach { bottomMenuItem ->
+            BottomNavigationItem(
+                selected = (selectedItem == bottomMenuItem.label),
+                onClick = {
+                    selectedItem = bottomMenuItem.label
+                    if (bottomMenuItem.label == "Cart") {
 
+                    } else {
+                        Toast.makeText(context, bottomMenuItem.label, Toast.LENGTH_SHORT).show()
+                    }
+                },
+                icon = {
+                    Icon(
+                        painter = bottomMenuItem.icon,
+                        contentDescription = null,
+                        tint = colorResource(id = R.color.yellow)
+                    )
+                })
+        }
     }
 }
