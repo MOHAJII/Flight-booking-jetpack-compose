@@ -1,7 +1,11 @@
 package net.haji.first_app.activities.dashboard
 
 import android.widget.Toast
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+//noinspection UsingMaterialAndMaterial3Libraries
 import androidx.compose.material.BottomNavigationItem
+//noinspection UsingMaterialAndMaterial3Libraries
 import androidx.compose.material.Icon
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.runtime.Composable
@@ -9,6 +13,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
@@ -23,7 +28,6 @@ fun prepareBottomMenu(): List<MyBottomMenuItem> {
         MyBottomMenuItem(label = "Cart", icon = painterResource(id = R.drawable.bottom_btn2)),
         MyBottomMenuItem(label = "Favorite", icon = painterResource(id = R.drawable.bottom_btn3)),
         MyBottomMenuItem(label = "Order", icon = painterResource(id = R.drawable.bottom_btn4)),
-
         )
 }
 
@@ -37,9 +41,7 @@ fun MyBottomMenu() {
     }
 
     BottomAppBar(
-        backgroundColor = colorResource(id = R.color.purple_700),
-        elevation = 3.dp
-
+        containerColor = colorResource(id = R.color.purple_700), tonalElevation = 3.dp
     ) {
         bottomMenuItemsList.forEach { bottomMenuItem ->
             BottomNavigationItem(
@@ -56,7 +58,11 @@ fun MyBottomMenu() {
                     Icon(
                         painter = bottomMenuItem.icon,
                         contentDescription = null,
-                        tint = colorResource(id = R.color.yellow)
+                        tint = colorResource(id = R.color.yellow),
+                        modifier = Modifier
+                            .padding(top = 0.dp)
+                            .size(20.dp)
+
                     )
                 })
         }
