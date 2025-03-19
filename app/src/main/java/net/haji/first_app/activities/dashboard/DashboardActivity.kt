@@ -42,7 +42,9 @@ fun MainScreen() {
                 .background(color = colorResource(id = R.color.purple_700))
                 .padding(paddingValues = paddingValues)
         ) {
-
+            item {
+                TopBar()
+            }
         }
     }
 }
