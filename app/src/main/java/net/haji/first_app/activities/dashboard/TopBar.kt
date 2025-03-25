@@ -43,7 +43,7 @@ fun TopBar() {
 
 
         Image(
-            painter = painterResource(id = R.drawable.profile),
+            painter = painterResource(id = R.drawable.bottom_btn4),
             contentDescription = null,
             modifier = Modifier
                 .clickable { }

@@ -31,6 +31,7 @@ import androidx.constraintlayout.compose.*
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import net.haji.first_app.MainActivity
 import net.haji.first_app.R
+import net.haji.first_app.activities.dashboard.DashboardActivity
 
 
 @SuppressLint("CustomSplashScreen")
@@ -41,7 +42,7 @@ class SplashActivity : AppCompatActivity() {
         setContent {
             StatusTopBarColor()
             SplashScreen(onGetStartedClick = {
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, DashboardActivity::class.java))
             })
         }
     }

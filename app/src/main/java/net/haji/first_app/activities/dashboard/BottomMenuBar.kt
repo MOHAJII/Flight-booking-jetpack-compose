@@ -41,7 +41,7 @@ fun MyBottomMenu() {
     }
 
     BottomAppBar(
-        containerColor = colorResource(id = R.color.purple_700), tonalElevation = 3.dp
+        containerColor = colorResource(id = R.color.dark_purple), tonalElevation = 3.dp
     ) {
         bottomMenuItemsList.forEach { bottomMenuItem ->
             BottomNavigationItem(
@@ -62,7 +62,6 @@ fun MyBottomMenu() {
                         modifier = Modifier
                             .padding(top = 0.dp)
                             .size(20.dp)
-
                     )
                 })
         }
