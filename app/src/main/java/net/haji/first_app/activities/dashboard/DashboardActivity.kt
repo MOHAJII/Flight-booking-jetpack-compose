@@ -94,7 +94,7 @@ fun MainScreen() {
                         hint = "Select origin",
                         showLocationLoading = showLocationLoading
                     ) {
-                        selectedItem -> from = selectedItem
+                        selectedItem -> from = selectedItem //
                     }
                 }
             }
